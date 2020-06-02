@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        var sexo = prompt("Digite o sexo: f ou m")
+        switch (sexo) {
+            case "f":
+                alert("Pessoa do sexo feminino não pode se alistar")
+                break
+            case "m":
+                var idade = Number(prompt("Qual é a sua idade?"))
+               // alert(typeof(idade))
+           
+            //estrutura switch para idade
+                    switch (idade>18) {
+                        case  true:
+                        var alistar = prompt("Já se alistou? (informe s para sim e n para não)")
+                        
+                            //estrtura switch para alistar
+                            switch (alistar) {
+                                case "n":
+                                    alert("Deve se alistar")
+                                    break;
+                            
+                                default: 
+                                alert("Já alistado")
+                                    break;
+                            }
+                        break
+                    
+                        default:
+                        alert("Somente deve ser alistar pessoa maior de 18 anos")
+                            break;
+                    }
+            break
+
+
+            default:
+                alert("Informação sexo inválido: digite m ou f")
+                break
+        }
+
+
+    </script>
+</body>
+</html>

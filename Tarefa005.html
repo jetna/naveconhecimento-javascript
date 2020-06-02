@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tarefa 005</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <!--Nesta tarefa, vocês devem utilizar, além do conceito de variáveis, 
+        o conceito de concatenação. Com isso, vocês devem fazer um código 
+        que peça o nome de dois times, a quantidade de gols que cada um fez, e 
+        depois exiba o placar do jogo.
+        Ex: "Digite o nome de um time"  - a pessoa digita Barcelona; 
+        "Digite quantos gols fez o Barcelona" - a pessoa digita 2; 
+        "Digite o nome de outro time" - a pessoa digita Real Madrid; 
+        "Digite quantos gols fez o Real Madrid" - a pessoa digita 1. 
+        "O placar foi Barcelona 2 X 1 Real Madrid".
+        ...........30/05/2020 Que tal agora dizer qual foi o time vencedor, ou se foi um empate? 
+        Boa sorte!............ 
+    -->
+            
+        <script>
+            var nomeTime1=prompt("Digite o nome do 1º time");
+            var qtde1= Number (prompt("Digite a quantida de gols do time "+nomeTime1));
+            var nomeTime2= prompt("Digite o nome do 2º time");
+            var qtde2=Number(prompt("Digite a quantida de gols do time "+nomeTime2));
+
+            alert("O placar foi "+nomeTime1+" "+qtde1+" X "+qtde2+" "+nomeTime2)
+            if (qtde1>qtde2) {
+                alert("Time "+nomeTime1+" é vencedor")
+                }
+            else if (qtde2>qtde1) {
+                alert("Time "+nomeTime2+" é vencedor")
+                } 
+            else if(qtde1==qtde2){
+                alert("Empate")
+            }
+        </script>
+
+</body>
+</html>>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tarefa 010</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <script>
+        var sexo = prompt("Informe sexo: f ou m")
+        switch (sexo) {
+            case "f":
+                alert("Pessoa do sexo feminino não precisa se alistar")
+                break
+            case "m":
+                var idade = Number(prompt("Informe idade"))
+
+                //idade
+                switch (idade) {
+                    case idade >= 18:
+                        var alistou = prompt("Já se alistou?")
+                                                
+                                    //alistar
+                                    switch (alistou) {
+                                        case "sim":
+                                            alert("Já alistado!")
+                                            break;
+                                        case "nao":
+                                            alert("Deve ser alistado")
+                                        default:
+                                            break;
+                                    } //fim alistar
+                                    break
+
+                    case idade < 18:
+                        alert("Menos de idade")
+                        break
+                    default:
+                        break
+                }
+                break
+            
+            default:
+                alert("Informação sexo inválida") 
+                break
+
+            default:
+                alert("inválido") 
+                break
+        }
+    /*
+                        */
+    </script>
+</body>
+
+</html>

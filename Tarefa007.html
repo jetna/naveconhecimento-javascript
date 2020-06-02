@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tarefa 007</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <!--
+Código onde sejam lidos um nome e um sobrenome através do prompt.
+Após a leitura dos mesmos, ele deverá exibir uma mensagem informando:
+    - Nome da pessoa
+    - qual o tipo da variável lida
+    - quantos caracteres ele tem
+-valendo a mesma coisa para o sobrenome. 
+
+Depois disso você deverá exibir uma mensagem dizendo:
+quantos caracteres têm, somados, nome e sobrenome.
+
+Ex.: nome: Nicolas, sobrenome: Cavalcante
+Seu nome é Nicolas, isso está sendo lido como uma string e tem 7 caracteres.
+Seu sobrenome é Cavalcante, isso está sendo lido como uma string e tem 10 caracteres.
+Seu nome e sobrenome somados têm 17 caracteres. Isso está sendo lido como number.-->
+    <script>
+        var primeiroNome = prompt("Digite seu primeiro nome: ")
+        var segundoNome = prompt("Digite seu sobrenome: ")
+        var tamanhoNomeSobrenome=Number(primeiroNome.length+segundoNome.length)
+        
+        alert("Seu nome é "+primeiroNome+", isso está sendo lido como "+(typeof(primeiroNome)+" e tem "+primeiroNome.length+" caracteres"))
+        alert("Seu sobrenome é "+segundoNome+", isso está sendo lido como "+(typeof(segundoNome)+" e tem "+segundoNome.length+" caracteres"))
+        alert("Seu nome e sobrenome somados têm "+tamanhoNomeSobrenome+" caracteres. Isso será lido como "+typeof(tamanhoNomeSobrenome))
+    </script>
+</body>
+</html>
