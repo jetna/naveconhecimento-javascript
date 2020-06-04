@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -8,37 +9,38 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
 </head>
+
 <body>
-    <button onclick="PergNome()">NOME</button>
-    <button onclick="PergSobrenome()">SOBRENOME</button>
+    <button onclick="pergNome()">NOME</button>
+    <button onclick="pergSobrenome()">SOBRENOME</button>
     <script>
         var nome
-        var confirNome
-      function PergNome(nome) {
-      nome = prompt("Qual é o seu nome?"+"</br>"+"Conteúdo da variável: "+nome)
-      alert(nome)
-      validarNome()
-      }
+        var sobrenome
+        var confirmeNome
 
-      function validarNome() {
-          if(nome==null){  
-              PergNome()            
-          }else{
-            confirmarNome()
-          }
-      }
+        function pergNome() {
+            do {
+                nome = prompt("Qual é o seu nome?" + "</br>" + "Conteúdo da variável: " + nome)
+            } while (nome == null || nome=="");
+            if (nome) {
+                confirmar()
+            }
+        }
 
-      function confirmarNome(nome) {
-          confirNome=prompt("Confirme o nome: ")
-      }
-      function nomeIgual(confirNome) {
-          if(confirNome!=nome){
-              confirmarNome()
-          }
-      }
-      document.writeln("Conteúdo variável: "+nome)
+        function pergSobrenome() {
+            do {
+                sobrenome = prompt("Qual é o seu sobrenome?" + "</br>" + "Conteúdo da variável: " + sobrenome)
+            } while (sobrenome == null || sobrenome=="");
+        }
+
+        function confirmar() {
+            do {
+                confirmeNome = prompt("Confirme seu nome")
+            } while (confirmeNome!=nome);
+        }
 
     </script>
 
 </body>
+
 </html>
