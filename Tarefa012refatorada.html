@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tarefa 012 Refatorada</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <button onclick="PergNome()">NOME</button>
+    <button onclick="PergSobrenome()">SOBRENOME</button>
+    <script>
+        var nome
+        var confirNome
+      function PergNome(nome) {
+      nome = prompt("Qual é o seu nome?"+"</br>"+"Conteúdo da variável: "+nome)
+      alert(nome)
+      validarNome()
+      }
+
+      function validarNome() {
+          if(nome==null){  
+              PergNome()            
+          }else{
+            confirmarNome()
+          }
+      }
+
+      function confirmarNome(nome) {
+          confirNome=prompt("Confirme o nome: ")
+      }
+      function nomeIgual(confirNome) {
+          if(confirNome!=nome){
+              confirmarNome()
+          }
+      }
+      document.writeln("Conteúdo variável: "+nome)
+
+    </script>
+
+</body>
+</html>

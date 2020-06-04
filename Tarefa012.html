@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tarefa 012</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <!--Numa página com um botão "nome" e outro "sobrenome" ele envie o prompt 
+    ao clicar no botão, perguntando o nome ou sobrenome, de acordo com o botão, 
+    considerando que o nome não pode estar vazio e nem nulo 
+    (que é o caso de a pessoa cancelar). 
+    Depois a pessoa deverá confirmar o nome dela, e 
+    enquanto não o fizer, o nome deverá ser perguntado novamente e a 
+    confirmação também.
+-->
+    <button onclick="PergNome()">NOME</button>
+    <button onclick="PergSobrenome()">SOBRENOME</button>
+    <script>
+              /*bloco para testes
+            if (nome=="") {alert("está vazia")}
+            if(nome==null){alert("está nulo")}else{alert(nome)}    */
+
+            function PergNome(nome) {
+            var nome = prompt("Qual é o seu nome?"+"</br>"+"Conteúdo da variável: "+nome)
+                if (nome==null  || nome=="") {
+                  PergNome()  
+                } else if(nome){
+                        var confirmeNome=prompt("Confirme seu nome")
+                        while (confirmeNome!=nome) {
+                            confirmeNome=prompt("Confirme seu nome")
+                        }
+                }
+            }
+
+          
+            function PergSobrenome(sobrenome) {
+            var sobrenome = prompt("Qual é o seu sobrenome?"+"</br>"+"Conteúdo da variável: "+sobrenome)
+                if (sobrenome==null  || sobrenome=="") {
+                  PergNome()  
+                } else if(sobrenome){
+                        var confirmesobrenome=prompt("Confirme seu nome")
+                        while (confirmesobre!=sobrenome) {
+                            confirmesobrenome=prompt("Confirme seu nome")
+                        }
+                }
+            }
+        
+
+
+    </script>
+</body>
+
+</html>
