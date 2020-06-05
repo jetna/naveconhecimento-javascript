@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tarefa 013</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <!--Nesta tarefa, vocês deverão ter um botão com os seguintes problemas:
+        > Par ou ímpar;                           > Tabuada;
+        > Resultado do jogo e time vencedor;      > Alistamento.
+
+Ou seja, quatro funções no total, que serão chamadas ao clicar no botão responsável.
+!-->
+    <div></div>
+    <button onclick="parimpar()">PAR/ÍMÁR</button>
+    <button onclick="tabuada()">TABUADA</button>
+    <button onclick="vencedor()">VENCEDOR</button>
+    <button onclick="alistamento()">ALISTAMENTO</button>
+
+    <script>
+        function parimpar() {
+            n = Number(prompt("Digite um número"));
+    if (n%2==0) {
+        alert("Este número é par")
+    }else{
+        alert("Este número é ímpar")
+    }
+        }
+
+        function tabuada() { 
+            num1=Number(prompt("Informe o multiplicador"))
+            
+            for (var i = 1; i <= 10; i++) {
+                var produto=num1*i
+                document.write(produto+"<BR>")
+                }
+               
+                }
+
+                function vencedor() {
+                    var nomeTime1=prompt("Digite o nome do 1º time");
+            var qtde1= Number (prompt("Digite a quantida de gols do time "+nomeTime1));
+            var nomeTime2= prompt("Digite o nome do 2º time");
+            var qtde2=Number(prompt("Digite a quantida de gols do time "+nomeTime2));
+
+            alert("O placar foi "+nomeTime1+" "+qtde1+" X "+qtde2+" "+nomeTime2)
+            if (qtde1>qtde2) {
+                alert("Time "+nomeTime1+" é vencedor")
+                }
+            else if (qtde2>qtde1) {
+                alert("Time "+nomeTime2+" é vencedor")
+                } 
+            else if(qtde1==qtde2){
+                alert("Empate")
+            }
+                }
+
+        function alistamento() {
+            var sexo = prompt("Digite o sexo: f ou m")
+        switch (sexo) {
+            case "f":
+                alert("Pessoa do sexo feminino não pode se alistar")
+                break
+            case "m":
+                var idade = Number(prompt("Qual é a sua idade?"))
+               // alert(typeof(idade))
+           
+            //estrutura switch para idade
+                    switch (idade>18) {
+                        case  true:
+                        var alistar = prompt("Já se alistou? (informe s para sim e n para não)")
+                        
+                            //estrtura switch para alistar
+                            switch (alistar) {
+                                case "n":
+                                    alert("Deve se alistar")
+                                    break;
+                            
+                                default: 
+                                alert("Já alistado")
+                                    break;
+                            }
+                        break
+                    
+                        default:
+                        alert("Somente deve ser alistar pessoa maior de 18 anos")
+                            break;
+                    }
+            break
+
+
+            default:
+                alert("Informação sexo inválido: digite m ou f")
+                break
+        }
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
