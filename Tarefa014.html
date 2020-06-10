@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tarefa 014</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <!--A página deverá ter ao menos 5 produtos, com seus respectivos botões de compra. 
+        Quando o botão de um produto for clicado, será enviada uma pergunta
+        para saber quantos produtos daquele a pessoa irá comprar, 
+        uma pergunta para saber se o pagamento será em
+         cartão ou em dinheiro - 
+        se for em cartão, a página perguntará se o pagamento é online ou presencial. 
+        Caso seja online, 
+        o número do cartão, a data de validade e o código de segurança 
+        serão pedidos (cartão máximo 16 caracteres, validade máximo 4 caracteres, código de 
+        segurança máximo 3 caracteres. Caso os três requisitos não sejam cumpridos, cartão inválido) - 
+        se o pagamento for presencial, a página irá perguntar se é débito ou crédito e retornará depois 
+        dizendo que a máquina de débito/crédito será enviada, de acordo com a resposta do usuário. 
+        Por fim, se o pagamento for em dinheiro, a página perguntará se é necessário troco - 
+        se a resposta for sim (ou true, pelo confirm), deverá perguntar para quantos reais seria o 
+        troco, sendo que se o valor for menor que o valor da compra um aviso será disparado. 
+        Após isso, a página deverá enviar um agradecimento.
+    -->
+
+    <button id="caneca" value="caneca" onclick="qtdCaneca()">CANECA</button>
+    <button id="almofada" value="almofada" onclick="qtdAlmofada()">ALMOFADA</button>
+    <button id="quadro" value="quadro" onclick="qtdQuadro()">QUADRO</button>
+    <button id="luminaria" value="luminaria" onclick="qtdLuminaria()">LUMINÁRIA</button>
+
+    <script>
+        valorProduto=5
+        var getQtde
+        function qtdCaneca() {
+            var qtdeCaneca = document.getElementById('caneca')
+            getQtde = prompt("Informa a quantidade:")
+            formaPagamento()
+            //document.write("teste")
+        }
+        function qtdAlmofada() {
+            var qtdAlmofada = document.getElementById('almofada')
+            getQtde = prompt("Informa a quantidade:")
+            formaPagamento()
+            //document.write("teste")
+        }
+        function qtdQuadro() {
+            var qtdQuadro = document.getElementById('quadro')
+             getQtde = prompt("Informa a quantidade:")
+            formaPagamento()
+            //document.write("teste")
+        }
+        function qtdLuminaria() {
+            var qtdLuminaria = document.getElementById('luminaria')
+             getQtde = prompt("Informa a quantidade:")
+            formaPagamento()
+            //document.write("teste")
+        }
+
+
+        function qtdAlmofada() {
+            var qtdeCaneca = document.getElementById('caneca')
+
+        }
+
+        function formaPagamento() {
+            var formaPag = prompt("Informe a forma de pagamento: c: cartão | d: dinheiro")
+            if (formaPag == "c") {
+                var onPresencial = prompt("Pagamento será presencial ou online?")
+
+                if (onPresencial == "o") {
+                    var numCartao = ""
+                    numCartao = prompt("informe o número do cartão: 16 números ")
+                    var valCartao = prompt("informe a validade do cartão: mmAA ")
+                    var numSegCartao = prompt("informe o número de segurança do cartão: 3 números")
+                    var validado = false
+
+                    do {
+                        function validarCartao(numCartao) {
+                            switch (numCartao) {
+                                case (numCartao.length != 16):
+                                    alert("Cartão inválido. informe 16 números")
+                                    alert(validado)
+                                    break;
+                                /* case (valCartao.length!=4):
+                                     alert("Cartão inválido. Informe 4 númeris")
+                                     break;
+                                 case (numSegCartao.length!=3):
+                                 alert("Cartão inválido")
+                                     break;*/
+                                default: validado = true
+                                    break;
+                            } //switch numCartao
+                        } //fim function validarCartao
+                    } while (validado != true);
+
+                }//fim pagamento o
+            }//fim pagamento c
+        
+        if (formaPag == "d") {
+            var troco = prompt("Precisa de troco? s=sim n=não")
+            switch (troco) {
+                case "s":
+                    var trocoS=prompt("Troco para quanto?")
+                   
+                    alert(trocoS-(getQtde*valorProduto))
+
+                    break;
+                case "n":
+                    break;
+                default: prompt("Informe s ou n")
+                    break;
+            }
+
+
+
+        } else {
+            alert("inválido")
+        }
+    }
+
+    </script>
+
+</body>
+
+</html>
